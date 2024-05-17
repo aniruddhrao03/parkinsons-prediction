@@ -9,4 +9,4 @@ This repository contains the code and models for a machine learning project aime
 - Predictive system to estimate the likelihood of Parkinson's disease
 
 ## Running 
-- Run streamlit run parkinsons_pred.py
+- streamlit run parkinsons_pred.py
