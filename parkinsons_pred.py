@@ -94,29 +94,48 @@ elif selected == "Prediction":
 # Feature Description page
 elif selected == "Feature Description":
     st.title("Feature Descriptions")
-    st.write("""
-    Here are the descriptions of the features used in the prediction model:
-    
-    - **MDVP:Fo(Hz)**: Average vocal fundamental frequency
-    - **MDVP:Fhi(Hz)**: Maximum vocal fundamental frequency
-    - **MDVP:Flo(Hz)**: Minimum vocal fundamental frequency
-    - **MDVP:Jitter(%)**: Measure of variation in fundamental frequency
-    - **MDVP:Jitter(Abs)**: Absolute measure of variation in fundamental frequency
-    - **MDVP:RAP**: Relative amplitude perturbation
-    - **MDVP:PPQ**: Five-point period perturbation quotient
-    - **Jitter:DDP**: Average absolute difference of differences between jitter cycles
-    - **MDVP:Shimmer**: Measure of variation in amplitude
-    - **MDVP:Shimmer(dB)**: Shimmer in decibels
-    - **Shimmer:APQ3**: Three-point amplitude perturbation quotient
-    - **Shimmer:APQ5**: Five-point amplitude perturbation quotient
-    - **MDVP:APQ**: Eleven-point amplitude perturbation quotient
-    - **Shimmer:DDA**: Average absolute difference of differences between shimmer cycles
-    - **NHR**: Noise-to-harmonics ratio
-    - **HNR**: Harmonics-to-noise ratio
-    - **RPDE**: Recurrence period density entropy
-    - **DFA**: Detrended fluctuation analysis
-    - **spread1**: Nonlinear measure of fundamental frequency variation
-    - **spread2**: Nonlinear measure of variation in amplitude
-    - **D2**: Nonlinear dynamical complexity measure
-    - **PPE**: Pitch period entropy
-    """)
+
+    st.write("Here are the descriptions of the features used in the prediction model:")
+
+    with st.expander("Fundamental Frequency Measures"):
+        st.write("""
+        - **MDVP:Fo(Hz)**: Average vocal fundamental frequency
+        - **MDVP:Fhi(Hz)**: Maximum vocal fundamental frequency
+        - **MDVP:Flo(Hz)**: Minimum vocal fundamental frequency
+        """)
+
+    with st.expander("Jitter Measures"):
+        st.write("""
+        - **MDVP:Jitter(%)**: Measure of variation in fundamental frequency
+        - **MDVP:Jitter(Abs)**: Absolute measure of variation in fundamental frequency
+        - **MDVP:RAP**: Relative amplitude perturbation
+        - **MDVP:PPQ**: Five-point period perturbation quotient
+        - **Jitter:DDP**: Average absolute difference of differences between jitter cycles
+        """)
+
+    with st.expander("Shimmer Measures"):
+        st.write("""
+        - **MDVP:Shimmer**: Measure of variation in amplitude
+        - **MDVP:Shimmer(dB)**: Shimmer in decibels
+        - **Shimmer:APQ3**: Three-point amplitude perturbation quotient
+        - **Shimmer:APQ5**: Five-point amplitude perturbation quotient
+        - **MDVP:APQ**: Eleven-point amplitude perturbation quotient
+        - **Shimmer:DDA**: Average absolute difference of differences between shimmer cycles
+        """)
+
+    with st.expander("Noise Measures"):
+        st.write("""
+        - **NHR**: Noise-to-harmonics ratio
+        - **HNR**: Harmonics-to-noise ratio
+        """)
+
+    with st.expander("Nonlinear Measures"):
+        st.write("""
+        - **RPDE**: Recurrence period density entropy
+        - **DFA**: Detrended fluctuation analysis
+        - **spread1**: Nonlinear measure of fundamental frequency variation
+        - **spread2**: Nonlinear measure of variation in amplitude
+        - **D2**: Nonlinear dynamical complexity measure
+        - **PPE**: Pitch period entropy
+        """)
+        
